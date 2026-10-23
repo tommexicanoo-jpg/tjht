@@ -56,7 +56,7 @@ public final class RealmBuilder {
                 for (int y = minY; y <= maxY; y++) { // copia corrupta
                     int srcY = y - dy;
                     BlockState out;
-                    if (!src.isInHeightLimit(srcY)) {
+                    if (src.isOutOfHeightLimit(srcY)) {
                         out = air;
                     } else {
                         sp.set(sx, srcY, sz);
